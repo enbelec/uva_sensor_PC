@@ -1,0 +1,58 @@
+object FormDebug: TFormDebug
+  Left = 1800
+  Height = 587
+  Top = 158
+  Width = 424
+  Caption = 'FormDebug'
+  ClientHeight = 587
+  ClientWidth = 424
+  OnCreate = FormCreate
+  LCLVersion = '2.0.6.0'
+  object Memo1: TMemo
+    Left = 43
+    Height = 508
+    Top = 36
+    Width = 325
+    Font.Color = clBlack
+    Lines.Strings = (
+      'Memo1'
+    )
+    ParentFont = False
+    ScrollBars = ssAutoVertical
+    TabOrder = 0
+  end
+  object borra: TButton
+    Left = 43
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'borra'
+    OnClick = borraClick
+    TabOrder = 1
+  end
+  object salir: TButton
+    Left = 296
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'salir'
+    OnClick = salirClick
+    TabOrder = 2
+  end
+  object edEstado: TEdit
+    Left = 160
+    Height = 23
+    Top = 8
+    Width = 40
+    TabOrder = 3
+    Text = 'edEstado'
+  end
+  object Label1: TLabel
+    Left = 120
+    Height = 15
+    Top = 8
+    Width = 35
+    Caption = 'estado'
+    ParentColor = False
+  end
+end

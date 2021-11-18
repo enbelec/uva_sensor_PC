@@ -1,0 +1,8 @@
+object Debug: TDebug
+  Left = 493
+  Height = 240
+  Top = 218
+  Width = 320
+  Caption = 'Debug'
+  LCLVersion = '2.0.6.0'
+end

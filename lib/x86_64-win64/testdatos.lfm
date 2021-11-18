@@ -1,0 +1,170 @@
+object Form2: TForm2
+  Left = 303
+  Height = 543
+  Top = 179
+  Width = 1110
+  Caption = 'TEST DATOS'
+  ClientHeight = 543
+  ClientWidth = 1110
+  LCLVersion = '2.0.6.0'
+  object salir: TButton
+    Left = 552
+    Height = 25
+    Top = 488
+    Width = 75
+    Caption = 'Salir'
+    OnClick = salirClick
+    TabOrder = 0
+  end
+  object leerFichero: TButton
+    Left = 200
+    Height = 25
+    Top = 488
+    Width = 91
+    Caption = 'leerFichero'
+    OnClick = leerFicheroClick
+    TabOrder = 1
+  end
+  object guardarFichero: TButton
+    Left = 312
+    Height = 25
+    Top = 488
+    Width = 88
+    Caption = 'guardarFichero'
+    OnClick = guardarFicheroClick
+    TabOrder = 2
+  end
+  object ficheroDatos: TEdit
+    Left = 48
+    Height = 23
+    Top = 8
+    Width = 568
+    TabOrder = 3
+    Text = 'ficheroDatos'
+  end
+  object ficheroSetup: TEdit
+    Left = 50
+    Height = 23
+    Top = 32
+    Width = 566
+    TabOrder = 4
+    Text = 'ficheroSetup'
+  end
+  object StringGrid1: TStringGrid
+    Left = 39
+    Height = 382
+    Top = 74
+    Width = 467
+    ColCount = 6
+    FixedCols = 0
+    RowCount = 1
+    TabOrder = 5
+    ColWidths = (
+      148
+      64
+      64
+      64
+      64
+      64
+    )
+    Cells = (
+      6
+      0
+      0
+      'tiempo'
+      1
+      0
+      'num sensor'
+      2
+      0
+      'o2'
+      3
+      0
+      'temp'
+      4
+      0
+      'presion'
+      5
+      0
+      'o2%'
+    )
+  end
+  object guardaArrayDat: TButton
+    Left = 408
+    Height = 25
+    Top = 488
+    Width = 99
+    Caption = 'guardaArrayDat'
+    OnClick = guardaArrayDatClick
+    TabOrder = 6
+  end
+  object Edit1: TEdit
+    Left = 520
+    Height = 23
+    Top = 120
+    Width = 48
+    TabOrder = 7
+    Text = '1'
+  end
+  object leeNumSensor: TButton
+    Left = 576
+    Height = 25
+    Top = 118
+    Width = 75
+    Caption = 'lee sensor'
+    OnClick = leeNumSensorClick
+    TabOrder = 8
+  end
+  object Chart1: TChart
+    Left = 707
+    Height = 294
+    Top = 104
+    Width = 369
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object SerieAuxO2: TLineSeries
+    end
+    object SerieAuxTemp: TLineSeries
+      LinePen.Color = clRed
+    end
+    object SerieAuxPres: TLineSeries
+    end
+  end
+  object Grafico: TButton
+    Left = 576
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Grafico'
+    OnClick = GraficoClick
+    TabOrder = 10
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.*.dat'
+    Filter = 'setup|*.stp|datos|*.dat'
+    left = 624
+    top = 8
+  end
+  object SaveDialog1: TSaveDialog
+    left = 624
+    top = 40
+  end
+end

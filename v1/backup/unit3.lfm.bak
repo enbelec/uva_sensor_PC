@@ -1,0 +1,109 @@
+object Auxiliar: TAuxiliar
+  Left = 73
+  Height = 111
+  Top = 837
+  Width = 120
+  BorderIcons = []
+  Caption = 'auxiliar'
+  ClientHeight = 111
+  ClientWidth = 120
+  Color = 8388672
+  OnCreate = FormCreate
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    Left = 8
+    Height = 30
+    Top = 0
+    Width = 61
+    Caption = 'COMS'
+    Font.Color = clWhite
+    Font.Height = 30
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object led_emit: TShape
+    Left = 8
+    Height = 18
+    Top = 32
+    Width = 17
+  end
+  object led_rec: TShape
+    Left = 8
+    Height = 18
+    Top = 48
+    Width = 17
+  end
+  object led_estado: TShape
+    Left = 8
+    Height = 18
+    Top = 64
+    Width = 17
+  end
+  object led_espera: TShape
+    Left = 8
+    Height = 18
+    Top = 80
+    Width = 17
+    Brush.Color = clDefault
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 15
+    Top = 35
+    Width = 30
+    Caption = 'emite'
+    Font.Color = clWhite
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 32
+    Height = 15
+    Top = 51
+    Width = 32
+    Caption = 'recibe'
+    Font.Color = clWhite
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 30
+    Height = 15
+    Top = 67
+    Width = 35
+    Caption = 'estado'
+    Font.Color = clWhite
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 30
+    Height = 15
+    Top = 83
+    Width = 34
+    Caption = 'espera'
+    Font.Color = clWhite
+    ParentColor = False
+    ParentFont = False
+  end
+  object Serial2: TSdpoSerial
+    Active = False
+    BaudRate = br115200
+    AltBaudRate = 0
+    DataBits = db8bits
+    Parity = pNone
+    FlowControl = fcNone
+    StopBits = sbOne
+    Device = 'COM1'
+    OnRxData = Serial2RxData
+    left = 80
+    top = 32
+  end
+  object Timer1: TTimer
+    Interval = 10
+    OnTimer = Timer1Timer
+    left = 80
+    top = 64
+  end
+end
